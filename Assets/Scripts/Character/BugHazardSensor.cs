@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider))]
-public class BugSensorTrigger : MonoBehaviour
+public class BugHazardSensor : MonoBehaviour
 {
     public event System.Action<BugHazard> OnHazardDetected;
 
