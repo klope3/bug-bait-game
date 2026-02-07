@@ -10,7 +10,6 @@ public class PlayerInput : MonoBehaviour
 
     public void Initialize()
     {
-        InputActionsProvider.OnClickStarted += InputActionsProvider_OnClickStarted;
     }
 
     private void Update()
@@ -24,11 +23,6 @@ public class PlayerInput : MonoBehaviour
         }
 
         CursorPosition = groundPlaneIntersection;
-    }
-
-    private void InputActionsProvider_OnClickStarted()
-    {
-        Debug.Log("Click");
     }
 
     private bool IntersectRayWithHorizontalPlane(Ray ray, float planeY, out Vector3 intersection)
