@@ -7,6 +7,14 @@ public class BugMovementChase : MonoBehaviour
     [SerializeField] private ECM2.Character character;
     [SerializeField] private float stopThreshold;
     [HideInInspector] public Transform targetTransform;
+    public float DistanceToTarget
+    {
+        get
+        {
+            if (targetTransform == null) return 0;
+            return Vector3.Distance(character.transform.position, targetTransform.position);
+        }
+    }
 
     private void Update()
     {
